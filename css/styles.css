@@ -1,0 +1,80 @@
+/* Set variables*/
+
+:root {
+  --base: #ece3ca;
+  --base-content: #282425;
+  --neutral: #2e282a;
+  --neutral-content: #ede6d4;
+  --accent: #db8850;
+  --accent-content: #282425;
+}
+
+/* Reset and base styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--base);
+  color: var(--base-content);
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--base);
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--base-content);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.navbar-brand:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  font-size: 1rem;
+}
+
+.navbar-menu li {
+  margin-left: 1rem;
+}
+
+#order-button {
+  border-radius: 0.5rem;
+  background-color: var(--accent);
+  color: var(--accent-content);
+  transition: box-shadow 0.7s;
+}
+
+#order-button:hover {
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: var(--base-content);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.navbar-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
