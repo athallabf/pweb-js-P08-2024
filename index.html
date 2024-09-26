@@ -1,121 +1,127 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sweet Crumbs</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <div>
-        <a href="#" class="navbar-brand">Sweet Crumbs</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Crumbs</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div>
+      <a href="#" class="navbar-brand">Sweet Crumbs</a>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Catalog</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a id="order-button" href="#">Order</a></li>
+    </ul>
+  </nav>
+  <section class="gallery-section">
+    <h1 class="gallery-title">Gallery</h1>
+    <div class="gallery-container">
+      <div class="gallery-column left">
+        <div class="gallery-item small-image">
+          <img src="images/bakery2.jpeg" alt="gallery1">
+        </div>
+        <div class="gallery-item small-image">
+          <img src="images/bakery3.jpeg" alt="gallery2">
+        </div>
       </div>
-      <ul class="navbar-menu">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Catalog</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a id="order-button" href="#">Order</a></li>
-      </ul>
-    </nav>
-    <section class="gallery-section">
-      <h1 class="gallery-title">Gallery</h1>
-      <div class="gallery-container">
-          <div class="gallery-column left">
-              <div class="gallery-item small-image">
-                  <img src="images/bakery2.jpeg" alt="gallery1">
-              </div>
-              <div class="gallery-item small-image">
-                  <img src="images/bakery3.jpeg" alt="gallery2">
-              </div>
-          </div>
-          <div class="gallery-item large-image">
-              <img src="images/bakery.jpeg" alt="gallery3">
-          </div>
-          <div class="gallery-column right">
-              <div class="gallery-item small-image">
-                  <img src="images/bakery4.jpeg" alt="gallery4">
-              </div>
-              <div class="gallery-item small-image">
-                  <img src="images/bakery5.jpeg" alt="gallery5">
-              </div>
-          </div>
+      <div class="gallery-item large-image">
+        <img src="images/bakery.jpeg" alt="gallery3">
       </div>
-      <button class="view-more-btn">
-        <p>View More</p>
-      </button>
-    </section>
-    <section class="testimoni">
-      <h1>What they say</h1>
-      <div class="testimoni-container">
-          <div class="testimoni-card">
-              <img src="images/quote.png" alt="quote" class="quote">
-              <p>“I love the cakes from Sweet Crumbs! They are so delicious and the service is amazing! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea numquam rem culpa cumque sed laboriosam, illum omnis.”</p>
-              <div class="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-              </div>
-              <img src="images/chef.png" alt="chef" class="chef">
-              <h4>Chef Renata</h4>
-          </div>
-          <div class="testimoni-card">
-              <img src="images/quote.png" alt="quote" class="quote">
-              <p>“I love the cakes from Sweet Crumbs! They are so delicious and the service is amazing! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea numquam rem culpa cumque sed laboriosam, illum omnis.”</p>
-              <div class="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-              </div>
-              <img src="images/chef2.png" alt="chef" class="chef">
-              <h4>Chef Juna</h4>
-          </div>
-          <div class="testimoni-card">
-              <img src="images/quote.png" alt="quote" class="quote">
-              <p>“I love the cakes from Sweet Crumbs! They are so delicious and the service is amazing! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea numquam rem culpa cumque sed laboriosam, illum omnis.”</p>
-              <div class="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-                  <img src="images/star.png" alt="rating">
-              </div>
-              <img src="images/chef3.png" alt="chef" class="chef">
-              <h4>Tanboy Kun</h4>
-          </div>
+      <div class="gallery-column right">
+        <div class="gallery-item small-image">
+          <img src="images/bakery4.jpeg" alt="gallery4">
+        </div>
+        <div class="gallery-item small-image">
+          <img src="images/bakery5.jpeg" alt="gallery5">
+        </div>
       </div>
-    </section>
-    <footer class="footer">
-      <div class="footer-content">
-          <div class="footer-section">
-              <h4>Address</h4>
-              <p>Jl. Setiabudi No. 193</p>
-              <p>Bandung, Indonesia</p>
-          </div>
-          <div class="footer-section">
-              <h4>Opening Hours</h4>
-              <p>Mon - Fri: 08:00 - 21:00</p>
-              <p>Sat - Sun: 08:00 - 22:00</p>
-          </div>
-          <div class="footer-section">
-              <h4>Contact</h4>
-              <p>+62 22 1234567</p>
-              <p>sweetcrumbs@gmail.com</p>
-          </div>
+    </div>
+    <button class="view-more-btn">
+      <p>View More</p>
+    </button>
+  </section>
+  <section class="testimoni">
+    <h1>What they say</h1>
+    <div class="testimoni-container">
+      <div class="testimoni-card">
+        <img src="images/quote.png" alt="quote" class="quote">
+        <p>“I love the cakes from Sweet Crumbs! They are so delicious and the service is amazing! Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Porro ea numquam rem culpa cumque sed laboriosam, illum omnis.”</p>
+        <div class="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+        </div>
+        <img src="images/chef.png" alt="chef" class="chef">
+        <h4>Chef Renata</h4>
       </div>
-      <hr class="footer-divider">
-      <div class="footer-bottom">
-          <p class="footer-copyright">© 2024 Sweet Crumbs. All rights reserved.</p>
-          <div class="footer-social">
-              <img src="images/facebook.png" alt="facebook">
-              <img src="images/twitter.png" alt="twitter">
-              <img src="images/instagram.png" alt="instagram">
-          </div>
+      <div class="testimoni-card">
+        <img src="images/quote.png" alt="quote" class="quote">
+        <p>“I love the cakes from Sweet Crumbs! They are so delicious and the service is amazing! Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Porro ea numquam rem culpa cumque sed laboriosam, illum omnis.”</p>
+        <div class="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+        </div>
+        <img src="images/chef2.png" alt="chef" class="chef">
+        <h4>Chef Juna</h4>
       </div>
-    </footer>
-  </body>
+      <div class="testimoni-card">
+        <img src="images/quote.png" alt="quote" class="quote">
+        <p>“I love the cakes from Sweet Crumbs! They are so delicious and the service is amazing! Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Porro ea numquam rem culpa cumque sed laboriosam, illum omnis.”</p>
+        <div class="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+          <img src="images/star.png" alt="rating">
+        </div>
+        <img src="images/chef3.png" alt="chef" class="chef">
+        <h4>Tanboy Kun</h4>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Address</h4>
+        <p>Jl. Setiabudi No. 193</p>
+        <p>Bandung, Indonesia</p>
+      </div>
+      <div class="footer-section">
+        <h4>Opening Hours</h4>
+        <p>Mon - Fri: 08:00 - 21:00</p>
+        <p>Sat - Sun: 08:00 - 22:00</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>+62 22 1234567</p>
+        <p>sweetcrumbs@gmail.com</p>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2024 Sweet Crumbs. All rights reserved.</p>
+      <div class="footer-social">
+        <img src="images/facebook.png" alt="facebook">
+        <img src="images/twitter.png" alt="twitter">
+        <img src="images/instagram.png" alt="instagram">
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
