@@ -224,3 +224,133 @@ body {
       gap: 4rem;
   }
 }
+
+/* gallery styles */
+.gallery-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-color: #ece3ca;
+}
+
+.gallery-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.small-image {
+  width: 280px;
+  height: 245px;
+}
+
+.large-image {
+  width: 400px;
+  height: 500px;
+}
+
+.view-more-btn {
+  width: 170px;
+  height: 50px;
+  background-color: #fef9c3;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  cursor: pointer;
+}
+
+.view-more-btn p {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .gallery-container {
+      max-width: 900px;
+  }
+  .small-image {
+      width: 220px;
+      height: 190px;
+  }
+  .large-image {
+      width: 320px;
+      height: 400px;
+  }
+}
+
+@media (max-width: 940px) {
+  .gallery-container {
+      max-width: 600px;
+  }
+  .gallery-column {
+      width: 100%;
+      flex-direction: row;
+  }
+  .small-image, .large-image {
+      width: 100%;
+      height: auto;
+  }
+  .small-image {
+      max-height: 190px;
+  }
+  .large-image {
+      max-height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-section {
+      padding: 2rem;
+  }
+  .gallery-title {
+      font-size: 36px;
+  }
+  .gallery-container {
+      width: 100%;
+  }
+  .gallery-column {
+      width: 100%;
+      flex-direction: column;
+  }
+  .small-image, .large-image {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+  }
+}
