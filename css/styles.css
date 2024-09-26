@@ -289,7 +289,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 12px;
   cursor: pointer;
 }
 
@@ -331,26 +331,5 @@ body {
   }
   .large-image {
       max-height: 400px;
-  }
-}
-
-@media (max-width: 640px) {
-  .gallery-section {
-      padding: 2rem;
-  }
-  .gallery-title {
-      font-size: 36px;
-  }
-  .gallery-container {
-      width: 100%;
-  }
-  .gallery-column {
-      width: 100%;
-      flex-direction: column;
-  }
-  .small-image, .large-image {
-      width: 100%;
-      height: auto;
-      max-height: 300px;
   }
 }
