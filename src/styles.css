@@ -313,6 +313,7 @@ body {
   height: 100vh;
   margin-left: 2rem;
   margin-right: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* GRID */
@@ -321,7 +322,7 @@ body {
   display: grid;
   justify-content: space-around;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-template-rows: auto;
   width: 100%;
   max-width: 80rem;
@@ -333,7 +334,7 @@ body {
 
 /* CATALOG */
 .card {
-  width: 16rem;
+  width: 10rem;
   background-color: var(--neutral);
   color: var(--neutral-content);
   border-radius: 1rem;
@@ -396,6 +397,19 @@ p {
 /* END CATALOG */
 
 /* RESPONSIVE */
+@media (min-width: 360px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 12rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
 
 @media (max-width: 940px) {
   .gallery-container {
