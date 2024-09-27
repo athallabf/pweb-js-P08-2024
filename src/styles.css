@@ -331,14 +331,9 @@ body {
 }
 
 .title {
-  text-align: center;
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: bold;
   margin-bottom: 2rem;
-}
-
-.title-catalog {
-  color: var(--neutral-content);
 }
 
 .gallery-container {
@@ -374,7 +369,7 @@ body {
 }
 
 .large-image {
-  width: 400px;
+  width: 560px;
   height: 500px;
 }
 
@@ -392,11 +387,62 @@ body {
   cursor: pointer;
 }
 
+.view-more-btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
 .view-more-btn p {
   font-size: 18px;
   font-weight: 600;
   color: black;
   margin: 0;
+}
+
+.view-more-btn a {
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .gallery-container {
+    max-width: 900px;
+  }
+  .small-image {
+    width: 220px;
+    height: 190px;
+  }
+  .large-image {
+    width: 320px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 940px) {
+  .gallery-container {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-column {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+  }
+  .small-image,
+  .large-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-section {
+    padding: 2rem 1rem;
+  }
+  .title {
+    font-size: 36px;
+  }
 }
 
 .wrapper {
@@ -426,6 +472,10 @@ body {
 /* END GRID */
 
 /* CATALOG */
+.title-catalog {
+  color: var(--neutral-content);
+}
+
 .card {
   width: 14rem;
   background-color: var(--neutral-content);
