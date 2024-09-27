@@ -165,6 +165,143 @@ body {
 }
 /* END NAVBAR */
 
+/* hero styles */
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.hero-content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #000000;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d97a4d;
+}
+
+.hero-title span {
+  font-family: 'MonteCarlo', cursive;
+  font-weight: 300;
+  color: #fcbf81;
+}
+
+.hero hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ffffff;
+  margin: 1rem 0;
+}
+
+.hero-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.hero-button {
+  width: 130px;
+  height: 40px;
+  background-color: #d97a4d;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #c56a3d;
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+.hero-button p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--base);
+  margin: 0;
+}
+
+.hero-button a {
+  text-decoration: none;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.hero-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image img:last-child {
+  object-fit: contain;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .hero {
+      flex-direction: row;
+  }
+
+  .hero-content {
+      width: 50%;
+      min-height: 100vh;
+      padding-left: 5rem;
+  }
+
+  .hero-title {
+      font-size: 4rem;
+  }
+
+  .hero-text {
+      font-size: 1.125rem;
+  }
+
+  .hero-image {
+      width: 50%;
+  }
+
+  .hero-image img:first-child {
+      margin-left: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+      width: 40%;
+  }
+
+  .hero-title {
+      font-size: 4rem;
+  }
+
+  .hero-image {
+      width: 60%;
+  }
+}
+
 /* testimoni styles */
 .testimoni {
   width: 100%;
