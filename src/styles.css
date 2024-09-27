@@ -28,17 +28,23 @@ body {
 }
 
 /* Navbar styles */
-
+/* Navbar styles */
 .navbar {
   display: flex;
+  z-index: 10;
   position: sticky;
   top: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem;
   background-color: var(--base);
 }
 
+#navbar-check {
+  display: none;
+}
+
+/* Navbar Brand */
 .navbar-brand {
   font-size: 1.25rem;
   font-weight: bold;
@@ -53,16 +59,7 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.navbar-menu {
-  display: flex;
-  list-style-type: none;
-  font-size: 1rem;
-}
-
-.navbar-menu li {
-  margin-left: 1rem;
-}
-
+/* Order Button Style */
 #order-button {
   border-radius: 0.5rem;
   background-color: var(--accent);
@@ -74,7 +71,16 @@ body {
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
+/* Navbar Menu */
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  font-size: 1rem;
+}
+
+/* Links in the Navbar */
 .navbar-menu a {
+  margin-left: 1rem;
   text-decoration: none;
   color: var(--base-content);
   padding: 0.5rem 1rem;
@@ -84,6 +90,78 @@ body {
 
 .navbar-menu a:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Hamburger Button */
+.navbar-btn {
+  display: none;
+}
+
+/* RESPONSIVE NAVBAR */
+
+@media (max-width: 728px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-brand {
+    flex-grow: 1;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--base);
+    padding: 1rem;
+    order: 3;
+  }
+
+  .navbar-menu a {
+    margin: 0.5rem 0;
+  }
+
+  /* Hamburger Button */
+  .navbar-btn {
+    display: block;
+    order: 2;
+  }
+
+  .navbar-btn label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .navbar-btn label span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--base-content);
+    transition: 0.4s ease;
+  }
+
+  /* Show menu when checkbox is checked */
+  #navbar-check:checked ~ .navbar-menu {
+    display: flex;
+  }
+
+  /* Hamburger animation */
+  #navbar-check:checked ~ .navbar-btn label span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+
+  #navbar-check:checked ~ .navbar-btn label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #navbar-check:checked ~ .navbar-btn label span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
 }
 /* END NAVBAR */
 
@@ -170,6 +248,18 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+/* .footer-catalog {
+  background-color: var(--base-content);
+  color: var(--base);
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+} */
 
 .footer-content {
   display: flex;
@@ -212,10 +302,6 @@ body {
   justify-content: space-between;
 }
 
-.footer-copyright {
-  color: #000000;
-}
-
 .footer-social {
   display: flex;
   flex-direction: row;
@@ -249,6 +335,10 @@ body {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 2rem;
+}
+
+.title-catalog {
+  color: var(--neutral-content);
 }
 
 .gallery-container {
@@ -310,10 +400,12 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  background-color: var(--neutral);
+  /* margin-right: 2rem; */
+  padding-top: 3rem;
   padding-bottom: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 /* GRID */
@@ -322,26 +414,29 @@ body {
   display: grid;
   justify-content: space-around;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   grid-template-rows: auto;
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
-  gap: 2rem;
+  margin-bottom: 4rem;
+  gap: 1.5rem;
 }
 
 /* END GRID */
 
 /* CATALOG */
 .card {
-  width: 10rem;
-  background-color: var(--neutral);
-  color: var(--neutral-content);
-  border-radius: 1rem;
+  width: 14rem;
+  background-color: var(--neutral-content);
+  color: var(--neutral);
+  border-radius: 0.4rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   overflow: hidden;
-  /* margin-bottom: 4rem; */
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .card figure {
@@ -390,14 +485,14 @@ p {
 
 .card-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0.5rem;
 }
 
 /* END CATALOG */
 
 /* RESPONSIVE */
-@media (min-width: 360px) {
+@media (max-width: 640px) {
   .title {
     font-size: 2rem;
   }
