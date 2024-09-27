@@ -185,17 +185,16 @@ body {
 }
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 700;
   color: #d97a4d;
 }
 
 .hero-title span {
   font-family: 'MonteCarlo', cursive;
-  font-weight: 300;
-  color: #fcbf81;
+  font-weight: 100;
+  color: #ece3ca;
 }
-
 .hero hr {
   width: 100%;
   border: none;
@@ -301,6 +300,7 @@ body {
       width: 60%;
   }
 }
+/*end hero*/
 
 /* about style*/
 .about-section {
@@ -316,15 +316,19 @@ body {
 }
 
 .about-content h1 {
-  font-size: 48px;
-  color: #D09064;
-  margin-bottom: 20px;
+  font-size: 52px;
+  color: #000000;
+  margin-bottom: 40px;
+  margin-right: 10px;
 }
 
 .about-content h1 .highlight {
   font-family: 'MonteCarlo', cursive;
-  font-size: 60px;
-  color: #F19152;
+  font-size: 72px;
+  font-weight: 100;
+  color: #db8850;
+  margin-top: 200px;
+  margin-left: 20px;
 }
 
 .about-content p {
@@ -333,9 +337,18 @@ body {
   color: #333;
 }
 
+.about-content h1:after { 
+  content: '';
+  display: block;
+  width: 360px; 
+  height: 1.5px; 
+  background-color: #000000; 
+  margin: -15px auto 0; 
+}
+
 .about-image img {
   max-width: 100%;
-  margin-top: -50px;
+  margin-top: -120px;
 }
 
 @media (max-width: 768px) {
@@ -353,6 +366,7 @@ body {
       font-size: 16px;
   }
 }
+/*end about*/
 
 /* testimoni styles */
 .testimoni {
