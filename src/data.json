@@ -131,7 +131,7 @@
     "id": 17,
     "title": "Cranberry Bread",
     "image": "https://i.pinimg.com/474x/f9/2d/fb/f92dfb75a568e2c8c2e48570d01f3d48.jpg?text=Cranberry+Bread",
-    "shortDescription": "A tangy bread made with cranberries and fresh orange zest.",
+    "shortDescription": "A tangy bread made with cranberries and orange zest.",
     "category": "Bread",
     "price": 5
   },
@@ -145,7 +145,7 @@
   },
   {
     "id": 19,
-    "title": "Peanut Butter Cookies",
+    "title": "Biscoff Cookies",
     "image": "https://i.pinimg.com/enabled_lo/474x/13/5f/dc/135fdc9b4f5877a211e0260895ba7a61.jpg?text=Peanut+Butter+Cookies",
     "shortDescription": "Soft and chewy cookies with a rich peanut butter flavor.",
     "category": "Cookies",
@@ -219,7 +219,7 @@
     "id": 28,
     "title": "Cookie Monster",
     "image": "https://i.pinimg.com/enabled_lo/474x/c5/78/76/c57876a624d795a777815198fb7b8231.jpg?text=Ginger+Snap+Cookies",
-    "shortDescription": "Crispy cookies made with monster dan teman-temannya.",
+    "shortDescription": "Crispy cookies made with monster and friends.",
     "category": "Cookies",
     "price": 3
   },

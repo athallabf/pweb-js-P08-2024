@@ -764,7 +764,7 @@ body {
 
 .card {
   width: 14rem;
-  height: 350px;
+  height: 360px;
   overflow: hidden;
   background-color: var(--neutral-content);
   color: var(--neutral);
@@ -789,14 +789,27 @@ body {
 
 .card p{
   justify-content: space-between;
+  margin: 0;
+  margin-top: 10px;
 }
 
 .card-body {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  height: 70%;
+}
+
+.shop{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .card-title {
-  text-wrap: nowrap;
+  text-wrap: wrap;
   font-size: 1.25rem;
   font-weight: bold;
   margin: 0 0 0.5rem 0;
@@ -880,6 +893,7 @@ p {
 
   .card {
     width: 12rem;
+    height: 380px;
   }
 
   .grid {

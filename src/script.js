@@ -35,6 +35,9 @@ const createCard = (item) => {
   const cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
 
+  const cardHeader = document.createElement('div');
+  cardHeader.classList.add('card-header');
+
   // Title
   const cardTitle = document.createElement('h2');
   cardTitle.classList.add('card-title');
@@ -48,6 +51,9 @@ const createCard = (item) => {
   const cardPrice = document.createElement('p');
   cardPrice.classList.add('card-price');
   cardPrice.textContent = `$${item.price}`; // Assuming 'price' is part of your fetched data
+
+  const shop = document.createElement('div');
+  shop.classList.add('shop');
 
   // Quantity Control
   const quantityContainer = document.createElement('div');
@@ -108,15 +114,21 @@ const createCard = (item) => {
   addToCartContainer.appendChild(addToCartButton);
 
   // Append title, description, price, quantity controls, and add to cart button to card body
-  cardBody.appendChild(cardTitle);
-  cardBody.appendChild(cardDescription);
-  cardBody.appendChild(cardPrice);
-  cardBody.appendChild(quantityContainer);
-  cardBody.appendChild(addToCartContainer); 
+  cardHeader.appendChild(cardTitle);
+  cardHeader.appendChild(cardDescription);
+  cardHeader.appendChild(cardPrice);
+
+  shop.appendChild(quantityContainer);
+  shop.appendChild(addToCartContainer); 
+
+  cardBody.appendChild(cardHeader);
+  cardBody.appendChild(shop);
+  
 
   // Append figure and card body to the card
   card.appendChild(figure);
   card.appendChild(cardBody);
+
 
   // Append the newly created card to the cards container
   cardsContainer.appendChild(card);
@@ -147,7 +159,7 @@ buttons.forEach(button => {
 
 // Fetch data and process it
 const loadData = async () => {
-  const data = await fetchData('https://dummyjson.com/c/c214-83c6-481e-87b7'); 
+  const data = await fetchData('https://dummyjson.com/c/6551-c288-4660-b66f'); 
 
   if (data) {
     products = data; // Store fetched data in products array
