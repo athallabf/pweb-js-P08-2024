@@ -1,4 +1,4 @@
-# pweb-HTML_CSS-P08-2024
+# pweb-js-P08-2024
 
 # Anggota Kelompok
 
