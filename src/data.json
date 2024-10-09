@@ -11,7 +11,7 @@
     "id": 2,
     "title": "Blueberry Muffin",
     "image": "https://i.pinimg.com/enabled_lo/474x/d3/93/5c/d3935c3dbcc53cbe223433c679438343.jpg?text=Blueberry+Muffin",
-    "shortDescription": "Soft and fluffy muffin with fresh blueberries.",
+    "shortDescription": "Soft and fluffy muffin with fresh sweet blueberries.",
     "category": "Muffins",
     "price": 3
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "title": "Pretzel",
     "image": "https://i.pinimg.com/enabled_lo/564x/da/1e/af/da1eaff9e88f15d7d9ccd0304d4fa3ff.jpg?text=Pretzel",
-    "shortDescription": "A golden-brown, knot-shaped snack with a chewy texture, sprinkled with coarse salt.",
+    "shortDescription": "A golden-brown, knot-shaped snack with a chewy texture.",
     "category": "Bread",
     "price": 5.5
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "title": "Donut",
     "image": "https://i.pinimg.com/474x/23/5e/4f/235e4f1f36f3f3c91c50f92386202877.jpg?text=Donut",
-    "shortDescription": "A soft, fried dough treat with a sweet glaze or sugary coating or filled with jam or cream",
+    "shortDescription": "A soft, fried dough treat with a sweet glaze or sugary coating.",
     "category": "Bread",
     "price": 4
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "title": "Banana Bread",
     "image": "https://i.pinimg.com/enabled_lo/474x/5a/11/cf/5a11cfe799f49aa838b304ff09f1a2a3.jpg?text=Banana+Bread",
-    "shortDescription": "A moist and sweet loaf made with ripe bananas.",
+    "shortDescription": "A moist and sweet loaf made with ripe bananas and love.",
     "category": "Bread",
     "price": 4.5
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "title": "Tiramisu",
     "image": "https://i.pinimg.com/474x/4b/e2/54/4be254a8bf0d92c8bd00a5e04b600514.jpg?text=Biscotti",
-    "shortDescription": "A creamy Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa powder.",
+    "shortDescription": "An Italian dessert made with layers of coffee-soaked ladyfingers.",
     "category": "Bread",
     "price": 4
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "title": "Banana cream pie",
     "image": "https://i.pinimg.com/474x/95/7a/85/957a8576f0275e88c74ea188202f1396.jpg?text=Peach+Cobbler",
-    "shortDescription": "A rich, sweet pie filled with cream and banana.",
+    "shortDescription": "A rich, sweet pie filled with vanilla cream and banana.",
     "category": "Pies",
     "price": 8
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "title": "Macaroons",
     "image": "https://i.pinimg.com/474x/66/0f/54/660f5411e13dbc022c7767be6ea4a7b6.jpg?text=Macaroons",
-    "shortDescription": "Chewy cookies with a crisp outer layer.",
+    "shortDescription": "Chewy cookies with a crisp outer layer and filled with cream.",
     "category": "Cookies",
     "price": 3
   },
@@ -139,7 +139,7 @@
     "id": 18,
     "title": "Cheese Danish",
     "image": "https://i.pinimg.com/474x/5a/0b/14/5a0b1427666568ccd8bd8e40a99efc17.jpg?text=Cheese+Danish",
-    "shortDescription": "A flaky pastry filled with sweet cream cheese and topped with a sugary glaze.",
+    "shortDescription": "A flaky pastry filled with sweet cream cheese and sugary glaze.",
     "category": "Pastries",
     "price": 4.5
   },
@@ -163,7 +163,7 @@
     "id": 21,
     "title": "Pain au Chocolat",
     "image": "https://i.pinimg.com/474x/17/8e/c9/178ec965b8a88724e6f8f47004aa1885.jpg?text=Pain+au+Chocolat",
-    "shortDescription": "A buttery croissant filled with rich dark chocolate.",
+    "shortDescription": "A buttery flaky croissant filled with rich dark chocolate.",
     "category": "Pastries",
     "price": 5
   },
@@ -195,7 +195,7 @@
     "id": 25,
     "title": "Chicken Pie",
     "image": "https://i.pinimg.com/474x/af/59/d8/af59d80b6606167a403bfdf3fbc91a2c.jpg?text=Chicken+Pot+Pie",
-    "shortDescription": "Savory pie filled with tender chicken and mixed vegetables in creamy sauce.",
+    "shortDescription": "Savory pie filled with chicken and vegetables in creamy sauce.",
     "category": "Pies",
     "price": 8.5
   },
@@ -211,7 +211,7 @@
     "id": 27,
     "title": "Berry Pie",
     "image": "https://i.pinimg.com/enabled_lo/474x/79/76/17/797617afd2f8b57aa558febb94136308.jpg?text=Berry+Pie",
-    "shortDescription": "Mixed berry pie made with fresh blueberries, raspberries, and strawberries.",
+    "shortDescription": "Mixed berry pie made with fresh blueberries and raspberries.",
     "category": "Pies",
     "price": 8
   },
@@ -219,7 +219,7 @@
     "id": 28,
     "title": "Cookie Monster",
     "image": "https://i.pinimg.com/enabled_lo/474x/c5/78/76/c57876a624d795a777815198fb7b8231.jpg?text=Ginger+Snap+Cookies",
-    "shortDescription": "Crispy cookies made with monster.",
+    "shortDescription": "Crispy cookies made with monster dan teman-temannya.",
     "category": "Cookies",
     "price": 3
   },

@@ -736,6 +736,7 @@ body {
 
 .filter-button{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
@@ -763,7 +764,7 @@ body {
 
 .card {
   width: 14rem;
-  height: 310px;
+  height: 350px;
   overflow: hidden;
   background-color: var(--neutral-content);
   color: var(--neutral);
@@ -786,6 +787,10 @@ body {
   object-fit: cover;
 }
 
+.card p{
+  justify-content: space-between;
+}
+
 .card-body {
   padding: 1.5rem;
 }
@@ -797,6 +802,44 @@ body {
   margin: 0 0 0.5rem 0;
   display: flex;
   align-items: center;
+}
+
+.quantity-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-button{
+  border-radius: 100%;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: var(--accent);
+  border: none;
+
+}
+
+.add-to-cart-button {
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--accent-content);
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background-color: var(--accent);
+  color: var(--accent-content);
+}
+
+.add-to-cart-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
 }
 
 .badge {

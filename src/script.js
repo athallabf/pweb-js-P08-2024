@@ -49,10 +49,70 @@ const createCard = (item) => {
   cardPrice.classList.add('card-price');
   cardPrice.textContent = `$${item.price}`; // Assuming 'price' is part of your fetched data
 
-  // Append title, description, and price to card body
+  // Quantity Control
+  const quantityContainer = document.createElement('div');
+  quantityContainer.classList.add('quantity-container');
+
+  // Decrease button
+  const decreaseButton = document.createElement('button');
+  decreaseButton.textContent = '-';
+  decreaseButton.classList.add('quantity-button');
+  decreaseButton.onclick = () => {
+    if (quantityValue > 0) {
+      quantityValue--;
+      quantityDisplay.textContent = quantityValue;
+    }
+  };
+
+  // Quantity display
+  const quantityDisplay = document.createElement('span');
+  quantityDisplay.textContent = '0'; // Initialize quantity to 0
+  let quantityValue = 0; // Track quantity value
+
+  // Increase button
+  const increaseButton = document.createElement('button');
+  increaseButton.textContent = '+';
+  increaseButton.classList.add('quantity-button');
+  increaseButton.onclick = () => {
+    quantityValue++;
+    quantityDisplay.textContent = quantityValue;
+  };
+
+  // Add buttons to the quantity container
+  quantityContainer.appendChild(decreaseButton);
+  quantityContainer.appendChild(quantityDisplay);
+  quantityContainer.appendChild(increaseButton);
+
+  // add to crt continer
+  const addToCartContainer = document.createElement('div');
+  addToCartContainer.classList.add('add-to-cart-container');
+
+  // Add to Cart button
+  const addToCartButton = document.createElement('button');
+  addToCartButton.textContent = 'Add to Cart';
+  addToCartButton.classList.add('add-to-cart-button');
+  addToCartButton.onclick = () => {
+    if (quantityValue > 0) {
+      // Simulate adding to cart (you can implement your own logic)
+      console.log(`Added ${quantityValue} of ${item.title} to the cart.`);
+      
+      // Reset quantity display and value
+      quantityValue = 0;
+      quantityDisplay.textContent = quantityValue;
+    } else {
+      alert('Please add a quantity before adding to the cart.');
+    }
+  };
+
+  // append add to cart button
+  addToCartContainer.appendChild(addToCartButton);
+
+  // Append title, description, price, quantity controls, and add to cart button to card body
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardDescription);
-  cardBody.appendChild(cardPrice); // Append price
+  cardBody.appendChild(cardPrice);
+  cardBody.appendChild(quantityContainer);
+  cardBody.appendChild(addToCartContainer); 
 
   // Append figure and card body to the card
   card.appendChild(figure);
@@ -61,6 +121,7 @@ const createCard = (item) => {
   // Append the newly created card to the cards container
   cardsContainer.appendChild(card);
 };
+
 
 
 // Function to display products in the cards container
@@ -86,7 +147,7 @@ buttons.forEach(button => {
 
 // Fetch data and process it
 const loadData = async () => {
-  const data = await fetchData('https://dummyjson.com/c/c214-d554-417d-ab3f'); 
+  const data = await fetchData('https://dummyjson.com/c/c214-83c6-481e-87b7'); 
 
   if (data) {
     products = data; // Store fetched data in products array
