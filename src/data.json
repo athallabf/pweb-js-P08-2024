@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Chocolate Croissant",
+    "image": "https://via.placeholder.com/150?text=Chocolate+Croissant",
+    "shortDescription": "A flaky and buttery croissant filled with rich chocolate.",
+    "category": "Pastries"
+  },
+  {
+    "id": 2,
+    "title": "Blueberry Muffin",
+    "image": "https://via.placeholder.com/150?text=Blueberry+Muffin",
+    "shortDescription": "Soft and fluffy muffin with fresh blueberries.",
+    "category": "Muffins"
+  },
+  {
+    "id": 3,
+    "title": "Sourdough",
+    "image": "https://via.placeholder.com/150?text=Sourdough",
+    "shortDescription": "Crusty on the outside with a tangy flavor from the sourdough starter.",
+    "category": "Bread"
+  },
+  {
+    "id": 4,
+    "title": "Cinnamon Roll",
+    "image": "https://via.placeholder.com/150?text=Cinnamon+Roll",
+    "shortDescription": "Warm cinnamon rolls drizzled with sweet icing.",
+    "category": "Pastries"
+  },
+  {
+    "id": 5,
+    "title": "Apple Pie",
+    "image": "https://via.placeholder.com/150?text=Apple+Pie",
+    "shortDescription": "A classic apple pie with a buttery flaky crust and spiced apples.",
+    "category": "Pies"
+  },
+  {
+    "id": 6,
+    "title": "Pumpkin Bread",
+    "image": "https://via.placeholder.com/150?text=Pumpkin+Bread",
+    "shortDescription": "A moist bread with a hint of cinnamon and nutmeg, perfect for fall.",
+    "category": "Bread"
+  },
+  {
+    "id": 7,
+    "title": "Raisin Scone",
+    "image": "https://via.placeholder.com/150?text=Raisin+Scone",
+    "shortDescription": "A soft and crumbly scone filled with juicy raisins.",
+    "category": "Scones"
+  },
+  {
+    "id": 8,
+    "title": "Chocolate Chip",
+    "image": "https://via.placeholder.com/150?text=Chocolate+Chip",
+    "shortDescription": "Classic cookies filled with chunks of chocolate chips.",
+    "category": "Cookies"
+  },
+  {
+    "id": 9,
+    "title": "Lemon Cake",
+    "image": "https://via.placeholder.com/150?text=Lemon+Cake",
+    "shortDescription": "A dense and moist cake with a zesty lemon flavor.",
+    "category": "Cakes"
+  },
+  {
+    "id": 10,
+    "title": "Banana Bread",
+    "image": "https://via.placeholder.com/150?text=Banana+Bread",
+    "shortDescription": "A moist and sweet loaf made with ripe bananas.",
+    "category": "Bread"
+  },
+  {
+    "id": 11,
+    "title": "Biscotti",
+    "image": "https://via.placeholder.com/150?text=Biscotti",
+    "shortDescription": "Crispy, twice-baked Italian cookies with almond slices.",
+    "category": "Cookies"
+  },
+  {
+    "id": 12,
+    "title": "Raspberry Tart",
+    "image": "https://via.placeholder.com/150?text=Raspberry+Tart",
+    "shortDescription": "A buttery tart crust filled with raspberry jam and topped with fresh raspberries.",
+    "category": "Tarts"
+  },
+  {
+    "id": 13,
+    "title": "Peach Cobbler",
+    "image": "https://via.placeholder.com/150?text=Peach+Cobbler",
+    "shortDescription": "Sweet peaches baked under a golden, flaky biscuit topping.",
+    "category": "Pies"
+  },
+  {
+    "id": 14,
+    "title": "Coconut Macaroons",
+    "image": "https://via.placeholder.com/150?text=Coconut+Macaroons",
+    "shortDescription": "Chewy coconut cookies with a crisp outer layer.",
+    "category": "Cookies"
+  },
+  {
+    "id": 15,
+    "title": "Cherry Danish",
+    "image": "https://via.placeholder.com/150?text=Cherry+Danish",
+    "shortDescription": "A flaky pastry filled with sweet cherry jam and cream cheese.",
+    "category": "Pastries"
+  },
+  {
+    "id": 16,
+    "title": "Pecan Pie",
+    "image": "https://via.placeholder.com/150?text=Pecan+Pie",
+    "shortDescription": "A rich, sweet pie filled with toasted pecans and a caramel-like filling.",
+    "category": "Pies"
+  },
+  {
+    "id": 17,
+    "title": "Maple Muffin",
+    "image": "https://via.placeholder.com/150?text=Maple+Muffin",
+    "shortDescription": "A sweet muffin with maple syrup and crunchy pecans.",
+    "category": "Muffins"
+  },
+  {
+    "id": 18,
+    "title": "Cranberry Bread",
+    "image": "https://via.placeholder.com/150?text=Cranberry+Bread",
+    "shortDescription": "A tangy bread made with cranberries and fresh orange zest.",
+    "category": "Bread"
+  },
+  {
+    "id": 19,
+    "title": "Drizzle Cake",
+    "image": "https://via.placeholder.com/150?text=Drizzle+Cake",
+    "shortDescription": "A light and fluffy cake soaked in lemon syrup and topped with icing.",
+    "category": "Cakes"
+  },
+  {
+    "id": 20,
+    "title": "Cheese Danish",
+    "image": "https://via.placeholder.com/150?text=Cheese+Danish",
+    "shortDescription": "A flaky pastry filled with sweet cream cheese and topped with a sugary glaze.",
+    "category": "Pastries"
+  }
+]
