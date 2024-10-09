@@ -1,142 +1,234 @@
 [
   {
     "id": 1,
-    "title": "Chocolate Croissant",
-    "image": "https://via.placeholder.com/150?text=Chocolate+Croissant",
+    "title": "Choco Croissant",
+    "image": "https://i.pinimg.com/564x/63/31/7b/63317b563a2bf031e72e748d4d75fe32.jpg?text=Chocolate+Croissant",
     "shortDescription": "A flaky and buttery croissant filled with rich chocolate.",
-    "category": "Pastries"
+    "category": "Pastries",
+    "price": 4.5
   },
   {
     "id": 2,
     "title": "Blueberry Muffin",
-    "image": "https://via.placeholder.com/150?text=Blueberry+Muffin",
+    "image": "https://i.pinimg.com/enabled_lo/474x/d3/93/5c/d3935c3dbcc53cbe223433c679438343.jpg?text=Blueberry+Muffin",
     "shortDescription": "Soft and fluffy muffin with fresh blueberries.",
-    "category": "Muffins"
+    "category": "Muffins",
+    "price": 3
   },
   {
     "id": 3,
     "title": "Sourdough",
-    "image": "https://via.placeholder.com/150?text=Sourdough",
+    "image": "https://i.pinimg.com/enabled_lo/474x/c2/f0/59/c2f059cbcae0ad599a48d39e873c5ecf.jpg?text=Sourdough",
     "shortDescription": "Crusty on the outside with a tangy flavor from the sourdough starter.",
-    "category": "Bread"
+    "category": "Bread",
+    "price": 6.5
   },
   {
     "id": 4,
     "title": "Cinnamon Roll",
-    "image": "https://via.placeholder.com/150?text=Cinnamon+Roll",
+    "image": "https://i.pinimg.com/enabled_lo/474x/77/56/53/775653366776be8f12219e4d0f535ddf.jpg?text=Cinnamon+Roll",
     "shortDescription": "Warm cinnamon rolls drizzled with sweet icing.",
-    "category": "Pastries"
+    "category": "Pastries",
+    "price": 5
   },
   {
     "id": 5,
     "title": "Apple Pie",
-    "image": "https://via.placeholder.com/150?text=Apple+Pie",
+    "image": "https://i.pinimg.com/474x/1d/79/8a/1d798a2f99c9e3d88e0ae6a2c6951112.jpg?text=Apple+Pie",
     "shortDescription": "A classic apple pie with a buttery flaky crust and spiced apples.",
-    "category": "Pies"
+    "category": "Pies",
+    "price": 7.5
   },
   {
     "id": 6,
-    "title": "Pumpkin Bread",
-    "image": "https://via.placeholder.com/150?text=Pumpkin+Bread",
-    "shortDescription": "A moist bread with a hint of cinnamon and nutmeg, perfect for fall.",
-    "category": "Bread"
+    "title": "Pretzel",
+    "image": "https://i.pinimg.com/enabled_lo/564x/da/1e/af/da1eaff9e88f15d7d9ccd0304d4fa3ff.jpg?text=Pretzel",
+    "shortDescription": "A golden-brown, knot-shaped snack with a chewy texture, sprinkled with coarse salt.",
+    "category": "Bread",
+    "price": 5.5
   },
   {
     "id": 7,
-    "title": "Raisin Scone",
-    "image": "https://via.placeholder.com/150?text=Raisin+Scone",
-    "shortDescription": "A soft and crumbly scone filled with juicy raisins.",
-    "category": "Scones"
+    "title": "Donut",
+    "image": "https://i.pinimg.com/474x/23/5e/4f/235e4f1f36f3f3c91c50f92386202877.jpg?text=Donut",
+    "shortDescription": "A soft, fried dough treat with a sweet glaze or sugary coating or filled with jam or cream",
+    "category": "Bread",
+    "price": 4
   },
   {
     "id": 8,
     "title": "Chocolate Chip",
-    "image": "https://via.placeholder.com/150?text=Chocolate+Chip",
+    "image": "https://i.pinimg.com/enabled_lo/474x/6f/a2/12/6fa212044776edcbc44b34687fc6e8e4.jpg?text=Chocolate+Chip",
     "shortDescription": "Classic cookies filled with chunks of chocolate chips.",
-    "category": "Cookies"
+    "category": "Cookies",
+    "price": 3.5
   },
   {
     "id": 9,
     "title": "Lemon Cake",
-    "image": "https://via.placeholder.com/150?text=Lemon+Cake",
+    "image": "https://i.pinimg.com/enabled_lo/736x/41/cc/d5/41ccd5fc96ea5c4343538611a40f7054.jpg?text=Lemon+Cake",
     "shortDescription": "A dense and moist cake with a zesty lemon flavor.",
-    "category": "Cakes"
+    "category": "Cakes",
+    "price": 6
   },
   {
     "id": 10,
     "title": "Banana Bread",
-    "image": "https://via.placeholder.com/150?text=Banana+Bread",
+    "image": "https://i.pinimg.com/enabled_lo/474x/5a/11/cf/5a11cfe799f49aa838b304ff09f1a2a3.jpg?text=Banana+Bread",
     "shortDescription": "A moist and sweet loaf made with ripe bananas.",
-    "category": "Bread"
+    "category": "Bread",
+    "price": 4.5
   },
   {
     "id": 11,
-    "title": "Biscotti",
-    "image": "https://via.placeholder.com/150?text=Biscotti",
-    "shortDescription": "Crispy, twice-baked Italian cookies with almond slices.",
-    "category": "Cookies"
+    "title": "Tiramisu",
+    "image": "https://i.pinimg.com/474x/4b/e2/54/4be254a8bf0d92c8bd00a5e04b600514.jpg?text=Biscotti",
+    "shortDescription": "A creamy Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa powder.",
+    "category": "Bread",
+    "price": 4
   },
   {
     "id": 12,
-    "title": "Raspberry Tart",
-    "image": "https://via.placeholder.com/150?text=Raspberry+Tart",
-    "shortDescription": "A buttery tart crust filled with raspberry jam and topped with fresh raspberries.",
-    "category": "Tarts"
+    "title": "Banana cream pie",
+    "image": "https://i.pinimg.com/474x/95/7a/85/957a8576f0275e88c74ea188202f1396.jpg?text=Peach+Cobbler",
+    "shortDescription": "A rich, sweet pie filled with cream and banana.",
+    "category": "Pies",
+    "price": 8
   },
   {
     "id": 13,
-    "title": "Peach Cobbler",
-    "image": "https://via.placeholder.com/150?text=Peach+Cobbler",
-    "shortDescription": "Sweet peaches baked under a golden, flaky biscuit topping.",
-    "category": "Pies"
+    "title": "Macaroons",
+    "image": "https://i.pinimg.com/474x/66/0f/54/660f5411e13dbc022c7767be6ea4a7b6.jpg?text=Macaroons",
+    "shortDescription": "Chewy cookies with a crisp outer layer.",
+    "category": "Cookies",
+    "price": 3
   },
   {
     "id": 14,
-    "title": "Coconut Macaroons",
-    "image": "https://via.placeholder.com/150?text=Coconut+Macaroons",
-    "shortDescription": "Chewy coconut cookies with a crisp outer layer.",
-    "category": "Cookies"
+    "title": "Cherry Danish",
+    "image": "https://i.pinimg.com/474x/4e/0e/49/4e0e49688e1af9c9127fedef17bab376.jpg?text=Cherry+Danish",
+    "shortDescription": "A flaky pastry filled with sweet cherry jam and cream cheese.",
+    "category": "Pastries",
+    "price": 5.5
   },
   {
     "id": 15,
-    "title": "Cherry Danish",
-    "image": "https://via.placeholder.com/150?text=Cherry+Danish",
-    "shortDescription": "A flaky pastry filled with sweet cherry jam and cream cheese.",
-    "category": "Pastries"
+    "title": "Pecan Pie",
+    "image": "https://i.pinimg.com/enabled_lo/474x/30/b1/b4/30b1b4928c3d3bfc60241af45d1fcdfc.jpg?text=Pecan+Pie",
+    "shortDescription": "A rich, sweet pie filled with toasted pecans and a caramel-like filling.",
+    "category": "Pies",
+    "price": 7
   },
   {
     "id": 16,
-    "title": "Pecan Pie",
-    "image": "https://via.placeholder.com/150?text=Pecan+Pie",
-    "shortDescription": "A rich, sweet pie filled with toasted pecans and a caramel-like filling.",
-    "category": "Pies"
+    "title": "Maple Muffin",
+    "image": "https://i.pinimg.com/474x/2f/78/1d/2f781d9f4eaf7bbe2caca05e50bdc10a.jpg?text=Maple+Muffin",
+    "shortDescription": "A sweet muffin with maple syrup and crunchy pecans.",
+    "category": "Muffins",
+    "price": 3.5
   },
   {
     "id": 17,
-    "title": "Maple Muffin",
-    "image": "https://via.placeholder.com/150?text=Maple+Muffin",
-    "shortDescription": "A sweet muffin with maple syrup and crunchy pecans.",
-    "category": "Muffins"
+    "title": "Cranberry Bread",
+    "image": "https://i.pinimg.com/474x/f9/2d/fb/f92dfb75a568e2c8c2e48570d01f3d48.jpg?text=Cranberry+Bread",
+    "shortDescription": "A tangy bread made with cranberries and fresh orange zest.",
+    "category": "Bread",
+    "price": 5
   },
   {
     "id": 18,
-    "title": "Cranberry Bread",
-    "image": "https://via.placeholder.com/150?text=Cranberry+Bread",
-    "shortDescription": "A tangy bread made with cranberries and fresh orange zest.",
-    "category": "Bread"
+    "title": "Cheese Danish",
+    "image": "https://i.pinimg.com/474x/5a/0b/14/5a0b1427666568ccd8bd8e40a99efc17.jpg?text=Cheese+Danish",
+    "shortDescription": "A flaky pastry filled with sweet cream cheese and topped with a sugary glaze.",
+    "category": "Pastries",
+    "price": 4.5
   },
   {
     "id": 19,
-    "title": "Drizzle Cake",
-    "image": "https://via.placeholder.com/150?text=Drizzle+Cake",
-    "shortDescription": "A light and fluffy cake soaked in lemon syrup and topped with icing.",
-    "category": "Cakes"
+    "title": "Peanut Butter Cookies",
+    "image": "https://i.pinimg.com/enabled_lo/474x/13/5f/dc/135fdc9b4f5877a211e0260895ba7a61.jpg?text=Peanut+Butter+Cookies",
+    "shortDescription": "Soft and chewy cookies with a rich peanut butter flavor.",
+    "category": "Cookies",
+    "price": 3.5
   },
   {
     "id": 20,
-    "title": "Cheese Danish",
-    "image": "https://via.placeholder.com/150?text=Cheese+Danish",
-    "shortDescription": "A flaky pastry filled with sweet cream cheese and topped with a sugary glaze.",
-    "category": "Pastries"
+    "title": "Oat-Raisin Cookies",
+    "image": "https://i.pinimg.com/enabled_lo/474x/76/9f/8c/769f8c0588964293c1083194a0bf8d25.jpg?text=Oatmeal+Raisin+Cookies",
+    "shortDescription": "Chewy cookies filled with oats and sweet raisins.",
+    "category": "Cookies",
+    "price": 3.5
+  },
+  {
+    "id": 21,
+    "title": "Pain au Chocolat",
+    "image": "https://i.pinimg.com/474x/17/8e/c9/178ec965b8a88724e6f8f47004aa1885.jpg?text=Pain+au+Chocolat",
+    "shortDescription": "A buttery croissant filled with rich dark chocolate.",
+    "category": "Pastries",
+    "price": 5
+  },
+  {
+    "id": 22,
+    "title": "Pumpkin Muffin",
+    "image": "https://i.pinimg.com/474x/df/52/28/df5228188a7c2c02eba21a1f8b48a4e4.jpg?text=Pumpkin+Muffin",
+    "shortDescription": "Moist muffin made with pumpkin puree and warm spices.",
+    "category": "Muffins",
+    "price": 3.5
+  },
+  {
+    "id": 23,
+    "title": "Choco Muffin",
+    "image": "https://i.pinimg.com/enabled_lo/474x/34/94/c2/3494c2b1572fe41c357aa5672609574e.jpg?text=Chocolate+Muffin",
+    "shortDescription": "Rich chocolate muffin filled with chocolate chips.",
+    "category": "Muffins",
+    "price": 3.5
+  },
+  {
+    "id": 24,
+    "title": "Lemon Muffin",
+    "image": "https://i.pinimg.com/enabled_lo/474x/31/d9/79/31d9799c2b474c78805c5d73ac1d8c77.jpg?text=Lemon+Blueberry+Muffin",
+    "shortDescription": "A tangy muffin packed with blueberries and a hint of lemon.",
+    "category": "Muffins",
+    "price": 3.5
+  },
+  {
+    "id": 25,
+    "title": "Chicken Pie",
+    "image": "https://i.pinimg.com/474x/af/59/d8/af59d80b6606167a403bfdf3fbc91a2c.jpg?text=Chicken+Pot+Pie",
+    "shortDescription": "Savory pie filled with tender chicken and mixed vegetables in creamy sauce.",
+    "category": "Pies",
+    "price": 8.5
+  },
+  {
+    "id": 26,
+    "title": "Pumpkin Pie",
+    "image": "https://i.pinimg.com/enabled_lo/474x/1a/db/9e/1adb9e950f00ab1dbbba99039a98cae0.jpg?text=Pumpkin+Pie",
+    "shortDescription": "A creamy pumpkin filling spiced with cinnamon and nutmeg.",
+    "category": "Pies",
+    "price": 7.5
+  },
+  {
+    "id": 27,
+    "title": "Berry Pie",
+    "image": "https://i.pinimg.com/enabled_lo/474x/79/76/17/797617afd2f8b57aa558febb94136308.jpg?text=Berry+Pie",
+    "shortDescription": "Mixed berry pie made with fresh blueberries, raspberries, and strawberries.",
+    "category": "Pies",
+    "price": 8
+  },
+  {
+    "id": 28,
+    "title": "Cookie Monster",
+    "image": "https://i.pinimg.com/enabled_lo/474x/c5/78/76/c57876a624d795a777815198fb7b8231.jpg?text=Ginger+Snap+Cookies",
+    "shortDescription": "Crispy cookies made with monster.",
+    "category": "Cookies",
+    "price": 3
+  },
+  {
+    "id": 29,
+    "title": "Garlic Bread",
+    "image": "https://i.pinimg.com/enabled_lo/474x/ea/e8/34/eae83495a307b0c89fb40a75ac2c861d.jpg?text=Garlic+Bread",
+    "shortDescription": "Crispy bread topped with a blend of garlic and herbs.",
+    "category": "Bread",
+    "price": 4
   }
 ]

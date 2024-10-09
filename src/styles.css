@@ -734,6 +734,33 @@ body {
   color: var(--neutral-content);
 }
 
+.filter-button{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-button button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: var(--neutral);
+  color: var(--neutral-content);
+  transition: background-color 0.3s;
+}
+
+.filter-button button:hover {
+  background-color: var(--accent);
+  color: var(--accent-content);
+}
+
+.filter-button button.active {
+  background-color: var(--accent);
+  color: var(--accent-content);
+}
+
 .card {
   width: 14rem;
   height: 310px;

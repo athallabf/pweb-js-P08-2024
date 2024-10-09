@@ -1,4 +1,7 @@
 const cardsContainer = document.querySelector('.cards-container');
+const buttons = document.querySelectorAll('.filter-button button');
+
+let products = []; // Initialize an array to hold fetched products
 
 // Fetch data from the given URL
 const fetchData = async (url) => {
@@ -9,7 +12,7 @@ const fetchData = async (url) => {
     }
     const data = await response.json();
     console.log('Fetched data:', data);
-    return data;
+    return data; // Ensure data is returned
   } catch (error) {
     console.error('Fetch error:', error);
   }
@@ -32,16 +35,24 @@ const createCard = (item) => {
   const cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
 
+  // Title
   const cardTitle = document.createElement('h2');
   cardTitle.classList.add('card-title');
-  cardTitle.textContent = item.title; // Assuming 'name' is part of your fetched data
+  cardTitle.textContent = item.title; // Assuming 'title' is part of your fetched data
 
+  // Description
   const cardDescription = document.createElement('p');
-  cardDescription.textContent = item.shortDescription; // Assuming 'description' is part of your fetched data
+  cardDescription.textContent = item.shortDescription; // Assuming 'shortDescription' is part of your fetched data
 
-  // Append title and description to card body
+  // Price
+  const cardPrice = document.createElement('p');
+  cardPrice.classList.add('card-price');
+  cardPrice.textContent = `$${item.price}`; // Assuming 'price' is part of your fetched data
+
+  // Append title, description, and price to card body
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardDescription);
+  cardBody.appendChild(cardPrice); // Append price
 
   // Append figure and card body to the card
   card.appendChild(figure);
@@ -51,17 +62,36 @@ const createCard = (item) => {
   cardsContainer.appendChild(card);
 };
 
+
+// Function to display products in the cards container
+const displayProducts = (items) => {
+  cardsContainer.innerHTML = ''; // Clear existing cards
+  items.forEach(createCard); // Create a card for each item
+};
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const category = button.textContent.toLowerCase();
+    if (category === 'all') {
+      displayProducts(products); // Show all products
+    } else {
+      const filteredProducts = products.filter(product => product.category.toLowerCase() === category);
+      displayProducts(filteredProducts); // Display filtered products
+    }
+  });
+});
+
 // Fetch data and process it
 const loadData = async () => {
-  const data = await fetchData('https://dummyjson.com/c/1ad0-3982-4917-8224'); // Replace with your actual URL
+  const data = await fetchData('https://dummyjson.com/c/c214-d554-417d-ab3f'); 
 
-  // Iterate through the fetched data and create cards if the data is valid
   if (data) {
-    for (const item of data) {
-      createCard(item);
-    }
+    products = data; // Store fetched data in products array
+    displayProducts(products); // Initially display all products
   }
 };
 
-// Load data when the page is ready
 loadData();
