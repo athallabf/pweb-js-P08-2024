@@ -2,9 +2,11 @@ const cardsContainer = document.querySelector('.cards-container');
 const buttons = document.querySelectorAll('.filter-button button');
 const cartItemsContainer = document.querySelector('.cart-items');
 const cartTotalElement = document.querySelector('.cart-total');
+const showRowsFilter = document.getElementById('showRows');
 
 // Initialize an array to hold fetched products
 let products = [];
+let currentCategory = 'all';
 
 // Initialize an array for the cart and retrieve it from localStorage
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -174,27 +176,46 @@ function updateCartUI() {
 // Display products in the cards container
 const displayProducts = (items) => {
   cardsContainer.innerHTML = '';
-  items.forEach(createCard);
+  const rowsToShow = parseInt(showRowsFilter.value) || items.length;
+  const limitedItems = items.slice(0, rowsToShow);
+  limitedItems.forEach(createCard);
 };
+
+showRowsFilter.addEventListener('change', () => {
+  // Re-display the products whenever the show rows value changes
+  buttons.forEach((button) => {
+    if (button.classList.contains('active')) {
+      // Get the current active category
+      const category = button.textContent.toLowerCase();
+      let filteredProducts = products;
+
+      // Filter products based on the current category
+      if (category !== 'all') {
+        filteredProducts = products.filter(product => product.category.toLowerCase() === category);
+      }
+
+      displayProducts(filteredProducts); // Display the filtered products
+    }
+  });
+});
 
 // Filter products by category
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
     buttons.forEach((btn) => btn.classList.remove('active'));
     button.classList.add('active');
-
     const category = button.textContent.toLowerCase();
+    let filteredProducts = products;
     if (category === 'all') {
-      displayProducts(products);
+      filteredProducts = products;
     } else {
-      const filteredProducts = products.filter(
+      filteredProducts = products.filter(
         (product) => product.category.toLowerCase() === category
       );
-      displayProducts(filteredProducts);
     }
+    displayProducts(filteredProducts); // Display products based on category selection
   });
 });
-
 function loadCartData() {
   // const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
