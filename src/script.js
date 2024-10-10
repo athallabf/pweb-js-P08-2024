@@ -1,7 +1,13 @@
 const cardsContainer = document.querySelector('.cards-container');
 const buttons = document.querySelectorAll('.filter-button button');
+const cartItemsContainer = document.querySelector('.cart-items');
+const cartTotalElement = document.querySelector('.cart-total');
 
-let products = []; // Initialize an array to hold fetched products
+// Initialize an array to hold fetched products
+let products = [];
+
+// Initialize an array for the cart and retrieve it from localStorage
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Fetch data from the given URL
 const fetchData = async (url) => {
@@ -12,57 +18,74 @@ const fetchData = async (url) => {
     }
     const data = await response.json();
     console.log('Fetched data:', data);
-    return data; // Ensure data is returned
+    return data;
   } catch (error) {
     console.error('Fetch error:', error);
   }
 };
 
+const addItemToLocalStorage = (item, quantity) => {
+  // Retrieve existing cart from localStorage or initialize an empty array
+  // const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Check if item already exists in cart
+  const existingItem = cart.find((cartItem) => cartItem.id === item.id);
+
+  if (existingItem) {
+    // Update the quantity of the existing item
+    existingItem.quantity += quantity;
+  } else {
+    // Add new item to cart
+    cart.push({ ...item, quantity });
+  }
+
+  // Save updated cart back to localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+};
+
 // Function to create a card element based on an item
 const createCard = (item) => {
-  // Create the card container
   const card = document.createElement('div');
   card.classList.add('card');
+  card.setAttribute('data-id', item.id);
 
-  // Create the figure element with image
   const figure = document.createElement('figure');
   const img = document.createElement('img');
-  img.src = item.image; // Assuming 'image' is part of your fetched data
-  img.alt = item.name; // Assuming 'name' is part of your fetched data
+  img.src = item.image;
+  img.alt = item.name;
   figure.appendChild(img);
 
-  // Create the card body
   const cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
 
   const cardHeader = document.createElement('div');
   cardHeader.classList.add('card-header');
 
-  // Title
   const cardTitle = document.createElement('h2');
   cardTitle.classList.add('card-title');
-  cardTitle.textContent = item.title; // Assuming 'title' is part of your fetched data
+  cardTitle.textContent = item.title;
 
-  // Description
   const cardDescription = document.createElement('p');
-  cardDescription.textContent = item.shortDescription; // Assuming 'shortDescription' is part of your fetched data
+  cardDescription.textContent = item.shortDescription;
 
-  // Price
   const cardPrice = document.createElement('p');
   cardPrice.classList.add('card-price');
-  cardPrice.textContent = `$${item.price}`; // Assuming 'price' is part of your fetched data
+  cardPrice.textContent = `$${item.price}`;
 
   const shop = document.createElement('div');
   shop.classList.add('shop');
 
-  // Quantity Control
   const quantityContainer = document.createElement('div');
   quantityContainer.classList.add('quantity-container');
 
-  // Decrease button
   const decreaseButton = document.createElement('button');
   decreaseButton.textContent = '-';
   decreaseButton.classList.add('quantity-button');
+
+  let quantityValue = 0;
+  const quantityDisplay = document.createElement('span');
+  quantityDisplay.textContent = '0';
+
   decreaseButton.onclick = () => {
     if (quantityValue > 0) {
       quantityValue--;
@@ -70,39 +93,35 @@ const createCard = (item) => {
     }
   };
 
-  // Quantity display
-  const quantityDisplay = document.createElement('span');
-  quantityDisplay.textContent = '0'; // Initialize quantity to 0
-  let quantityValue = 0; // Track quantity value
-
-  // Increase button
   const increaseButton = document.createElement('button');
   increaseButton.textContent = '+';
   increaseButton.classList.add('quantity-button');
+
   increaseButton.onclick = () => {
     quantityValue++;
     quantityDisplay.textContent = quantityValue;
   };
 
-  // Add buttons to the quantity container
   quantityContainer.appendChild(decreaseButton);
   quantityContainer.appendChild(quantityDisplay);
   quantityContainer.appendChild(increaseButton);
 
-  // add to crt continer
   const addToCartContainer = document.createElement('div');
   addToCartContainer.classList.add('add-to-cart-container');
 
-  // Add to Cart button
   const addToCartButton = document.createElement('button');
   addToCartButton.textContent = 'Add to Cart';
   addToCartButton.classList.add('add-to-cart-button');
+
+  // Add to cart logic
   addToCartButton.onclick = () => {
     if (quantityValue > 0) {
-      // Simulate adding to cart (you can implement your own logic)
       console.log(`Added ${quantityValue} of ${item.title} to the cart.`);
-      
-      // Reset quantity display and value
+      addItemToLocalStorage(item, quantityValue);
+      alert(`${quantityValue} of ${item.title} added to cart.`);
+      updateCartUI();
+      loadCartData();
+
       quantityValue = 0;
       quantityDisplay.textContent = quantityValue;
     } else {
@@ -110,61 +129,96 @@ const createCard = (item) => {
     }
   };
 
-  // append add to cart button
   addToCartContainer.appendChild(addToCartButton);
 
-  // Append title, description, price, quantity controls, and add to cart button to card body
   cardHeader.appendChild(cardTitle);
   cardHeader.appendChild(cardDescription);
   cardHeader.appendChild(cardPrice);
 
   shop.appendChild(quantityContainer);
-  shop.appendChild(addToCartContainer); 
+  shop.appendChild(addToCartContainer);
 
   cardBody.appendChild(cardHeader);
   cardBody.appendChild(shop);
-  
 
-  // Append figure and card body to the card
   card.appendChild(figure);
   card.appendChild(cardBody);
 
-
-  // Append the newly created card to the cards container
   cardsContainer.appendChild(card);
 };
 
+// Function to update cart section in the UI
+function updateCartUI() {
+  cartItemsContainer.innerHTML = ''; // Clear current cart items display
 
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = '<li>Your cart is empty.</li>';
+    cartTotalElement.textContent = 'Total: $0';
+    return;
+  }
 
-// Function to display products in the cards container
+  let totalPrice = 0;
+
+  cart.forEach((cartItem) => {
+    const cartItemElement = document.createElement('li');
+    cartItemElement.textContent = `${cartItem.quantity} x ${
+      cartItem.title
+    } - $${cartItem.price * cartItem.quantity}`;
+    cartItemsContainer.appendChild(cartItemElement);
+    totalPrice += cartItem.price * cartItem.quantity;
+  });
+
+  cartTotalElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+}
+
+// Display products in the cards container
 const displayProducts = (items) => {
-  cardsContainer.innerHTML = ''; // Clear existing cards
-  items.forEach(createCard); // Create a card for each item
+  cardsContainer.innerHTML = '';
+  items.forEach(createCard);
 };
 
-buttons.forEach(button => {
+// Filter products by category
+buttons.forEach((button) => {
   button.addEventListener('click', () => {
-    buttons.forEach(btn => btn.classList.remove('active'));
+    buttons.forEach((btn) => btn.classList.remove('active'));
     button.classList.add('active');
 
     const category = button.textContent.toLowerCase();
     if (category === 'all') {
-      displayProducts(products); // Show all products
+      displayProducts(products);
     } else {
-      const filteredProducts = products.filter(product => product.category.toLowerCase() === category);
-      displayProducts(filteredProducts); // Display filtered products
+      const filteredProducts = products.filter(
+        (product) => product.category.toLowerCase() === category
+      );
+      displayProducts(filteredProducts);
     }
   });
 });
 
-// Fetch data and process it
+function loadCartData() {
+  // const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  cart.forEach((cartItem) => {
+    const matchingCard = document.querySelector(`[data-id="${cartItem.id}"]`);
+    if (matchingCard) {
+      const quantityDisplay = matchingCard.querySelector('.quantity-display');
+      if (quantityDisplay) {
+        quantityDisplay.textContent = cartItem.quantity;
+      }
+    }
+  });
+}
+
+// Fetch data and display it
 const loadData = async () => {
-  const data = await fetchData('https://dummyjson.com/c/6551-c288-4660-b66f'); 
+  const data = await fetchData('https://dummyjson.com/c/6551-c288-4660-b66f');
 
   if (data) {
-    products = data; // Store fetched data in products array
-    displayProducts(products); // Initially display all products
+    products = data;
+    displayProducts(products);
   }
 };
 
 loadData();
+loadCartData();
+updateCartUI();
