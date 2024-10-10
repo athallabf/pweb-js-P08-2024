@@ -204,8 +204,10 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
     buttons.forEach((btn) => btn.classList.remove('active'));
     button.classList.add('active');
+
     const category = button.textContent.toLowerCase();
     let filteredProducts = products;
+
     if (category === 'all') {
       filteredProducts = products;
     } else {
@@ -232,7 +234,7 @@ function loadCartData() {
 
 // Fetch data and display it
 const loadData = async () => {
-  const data = await fetchData('https://dummyjson.com/c/6551-c288-4660-b66f');
+  const data = await fetchData('https://dummyjson.com/c/9671-5bb6-4c72-9073');
 
   if (data) {
     products = data;

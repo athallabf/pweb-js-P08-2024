@@ -1,5 +1,4 @@
 [
-  { "url": "https://dummyjson.com/c/6551-c288-4660-b66f" },
   {
     "id": 1,
     "title": "Choco Croissant",
@@ -85,7 +84,7 @@
     "title": "Tiramisu",
     "image": "https://i.pinimg.com/474x/4b/e2/54/4be254a8bf0d92c8bd00a5e04b600514.jpg?text=Biscotti",
     "shortDescription": "An Italian dessert made with layers of coffee-soaked ladyfingers.",
-    "category": "Bread",
+    "category": "Cakes",
     "price": 4
   },
   {
@@ -231,5 +230,173 @@
     "shortDescription": "Crispy bread topped with a blend of garlic and herbs.",
     "category": "Bread",
     "price": 4
+  },
+  {
+    "id": 30,
+    "title": "Cream Puff",
+    "image": "https://i.pinimg.com/enabled_lo/736x/11/f1/3e/11f13e614074eb708836b8ae0bb8206c.jpg?text=Cream+Puff",
+    "shortDescription": "Light choux pastry filled with sweet cream.",
+    "category": "Pastries",
+    "price": 5
+  },
+  {
+    "id": 31,
+    "title": "Choco Eclairs",
+    "image": "https://i.pinimg.com/enabled_lo/474x/87/4c/7b/874c7b24ddb1e07e31c4301a31723f8f.jpg?text=Choco+Eclairs",
+    "shortDescription": "Delicious eclairs filled with chocolate cream.",
+    "category": "Pastries",
+    "price": 6
+  },
+  {
+    "id": 32,
+    "title": "Bomboloni Donut",
+    "image": "https://i.pinimg.com/enabled_lo/474x/e9/60/06/e9600697ea1889c39bd1daf848d67a14.jpg?text=Bomboloni+Donut",
+    "shortDescription": "Italian-style filled doughnut dusted with sugar.",
+    "category": "Pastries",
+    "price": 4
+  },
+  {
+    "id": 33,
+    "title": "Cromboloni",
+    "image": "https://i.pinimg.com/474x/6f/0b/fa/6f0bfa243668c2fab777f1a9738a61d1.jpg?text=Cromboloni",
+    "shortDescription": "A croissant and bomboloni hybrid filled with cream.",
+    "category": "Pastries",
+    "price": 7
+  },
+  {
+    "id": 34,
+    "title": "Baklava Rolls",
+    "image": "https://i.pinimg.com/enabled_lo/474x/f8/6b/63/f86b632774b27e3acd57cf4fc1bb03e0.jpg?text=Baklava+Rolls",
+    "shortDescription": "Sweet and crispy phyllo dough filled with nuts and honey.",
+    "category": "Pastries",
+    "price": 8
+  },
+  {
+    "id": 35,
+    "title": "Madeleine",
+    "image": "https://i.pinimg.com/enabled_lo/474x/34/d2/c1/34d2c1ad9b21c39bd8edd11a85974551.jpg?text=Madeleine",
+    "shortDescription": "Classic French butter cakes with a light texture.",
+    "category": "Pastries",
+    "price": 4
+  },
+  {
+    "id": 36,
+    "title": "Curry Bread Buns",
+    "image": "https://i.pinimg.com/474x/5a/21/a4/5a21a4e2fdf8eea36975cc3739acd9e7.jpg?text=curry+bread+buns",
+    "shortDescription": "Soft buns filled with flavorful curry.",
+    "category": "Bread",
+    "price": 5
+  },
+  {
+    "id": 37,
+    "title": "Coffee Buns",
+    "image": "https://i.pinimg.com/474x/14/1b/48/141b4852f5c2fb1ad4ea1972137f312a.jpg?text=Coffee+Buns",
+    "shortDescription": "Soft and fluffy buns with a coffee-flavored topping.",
+    "category": "Bread",
+    "price": 4
+  },
+  {
+    "id": 38,
+    "title": "Melon Buns",
+    "image": "https://i.pinimg.com/474x/af/3b/8b/af3b8be751ac1c2ba0f9c7008f115f6c.jpg?text=Melon+Buns",
+    "shortDescription": "Japanese sweet buns with a crisp cookie crust.",
+    "category": "Bread",
+    "price": 5
+  },
+  {
+    "id": 39,
+    "title": "Chicken Floss Buns",
+    "image": "https://i.pinimg.com/474x/10/c9/ac/10c9acd3011be7e0759441f7698ce8f8.jpg?text=Chicken+Floss+Buns",
+    "shortDescription": "Savory buns topped with chicken floss.",
+    "category": "Bread",
+    "price": 6
+  },
+  {
+    "id": 40,
+    "title": "Brownies",
+    "image": "https://i.pinimg.com/enabled_lo/474x/57/82/fa/5782fa7e5b3371e689c11ef2c112974d.jpg?text=Brownies",
+    "shortDescription": "Rich and fudgy chocolate brownies.",
+    "category": "Cookies",
+    "price": 3
+  },
+  {
+    "id": 41,
+    "title": "Cheese Cake",
+    "image": "https://i.pinimg.com/enabled_lo/474x/53/ff/e2/53ffe2ce6d416ba5dd9492580c4e8251.jpg?text=Cheese+Cake",
+    "shortDescription": "Creamy cheesecake with a graham cracker crust.",
+    "category": "Cakes",
+    "price": 7
+  },
+  {
+    "id": 42,
+    "title": "Strawberry Cake",
+    "image": "https://i.pinimg.com/enabled_lo/474x/d9/9e/c1/d99ec1a96c156b7e67cc854073f8b944.jpg?text=Strawberry+Cake",
+    "shortDescription": "Soft sponge cake layered with fresh strawberries.",
+    "category": "Cakes",
+    "price": 8
+  },
+  {
+    "id": 43,
+    "title": "Pancake",
+    "image": "https://i.pinimg.com/enabled_lo/474x/ee/69/c9/ee69c9f5b93d8413c031a365082bf561.jpg?text=Pancake",
+    "shortDescription": "Fluffy pancakes served with syrup.",
+    "category": "Cakes",
+    "price": 4
+  },
+  {
+    "id": 44,
+    "title": "Mousse Cake",
+    "image": "https://i.pinimg.com/enabled_lo/474x/ee/67/ae/ee67ae70e9fe475003fed1648f1e9d65.jpg?text=Mousse+Cake",
+    "shortDescription": "Smooth and creamy mousse layered on a sponge base.",
+    "category": "Cakes",
+    "price": 9
+  },
+  {
+    "id": 45,
+    "title": "Rainbow Cake",
+    "image": "https://i.pinimg.com/474x/31/2e/cd/312ecd7acdeb732f7ea3bf8d3aa30622.jpg?text=Rainbow+Cake",
+    "shortDescription": "Colorful layered cake with vanilla frosting.",
+    "category": "Cakes",
+    "price": 10
+  },
+  {
+    "id": 46,
+    "title": "Waffle",
+    "image": "https://i.pinimg.com/enabled_lo/474x/99/20/44/992044581a498f43300921ac32e2ebde.jpg?text=Waffle",
+    "shortDescription": "Crispy waffles served with butter and syrup.",
+    "category": "Pastries",
+    "price": 6
+  },
+  {
+    "id": 47,
+    "title": "Meat Pie",
+    "image": "https://i.pinimg.com/enabled_lo/474x/72/7c/9f/727c9fc26da81b5da2505fa2caf4dd6f.jpg?text=Meat+Pie",
+    "shortDescription": "Savory pie filled with minced meat and vegetables.",
+    "category": "Pies",
+    "price": 8
+  },
+  {
+    "id": 48,
+    "title": "Matcha Cookies",
+    "image": "https://i.pinimg.com/enabled_lo/474x/d7/66/52/d76652ea2e7c487e702f7b35e8b187d6.jpg?text=Matcha+Cookies",
+    "shortDescription": "Crispy cookies flavored with Japanese matcha.",
+    "category": "Cookies",
+    "price": 4
+  },
+  {
+    "id": 49,
+    "title": "Oreo Cookies",
+    "image": "https://i.pinimg.com/enabled_lo/474x/5a/0f/8d/5a0f8df281be0fcf517d509003e3c9aa.jpg?text=Oreo+Cookies",
+    "shortDescription": "Classic Oreo cookies with cream filling.",
+    "category": "Cookies",
+    "price": 3
+  },
+  {
+    "id": 50,
+    "title": "Churros",
+    "image": "https://i.pinimg.com/enabled_lo/474x/b4/54/7d/b4547d14fc246fa9d7a453db96299f12.jpg?text=Churros",
+    "shortDescription": "Crispy fried dough dusted with sugar and served with chocolate dip.",
+    "category": "Pastries",
+    "price": 5
   }
 ]
