@@ -6,14 +6,11 @@ const showRowsFilter = document.getElementById('showRows');
 const cartSidebar = document.getElementById('cartSidebar');
 const orderButton = document.getElementById('order-button');
 
-// Initialize an array to hold fetched products
 let products = [];
 let currentCategory = 'all';
 
-// Initialize an array for the cart and retrieve it from localStorage
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Fetch data from the given URL
 const fetchData = async (url) => {
   try {
     const response = await fetch(url);
@@ -29,25 +26,19 @@ const fetchData = async (url) => {
 };
 
 const addItemToLocalStorage = (item, quantity) => {
-  // Retrieve existing cart from localStorage or initialize an empty array
-  // const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  // Check if item already exists in cart
   const existingItem = cart.find((cartItem) => cartItem.id === item.id);
 
   if (existingItem) {
-    // Update the quantity of the existing item
     existingItem.quantity += quantity;
+
   } else {
-    // Add new item to cart
     cart.push({ ...item, quantity });
   }
 
-  // Save updated cart back to localStorage
   localStorage.setItem('cart', JSON.stringify(cart));
 };
 
-// Function to create a card element based on an item
 const createCard = (item) => {
   const card = document.createElement('div');
   card.classList.add('card');
@@ -151,9 +142,9 @@ const createCard = (item) => {
   cardsContainer.appendChild(card);
 };
 
-// Function to update cart section in the UI
+// Update cart section in the UI
 function updateCartUI() {
-  cartItemsContainer.innerHTML = ''; // Clear current cart items display
+  cartItemsContainer.innerHTML = ''; 
 
   if (cart.length === 0) {
     cartItemsContainer.innerHTML = '<li>Your cart is empty.</li>';
@@ -175,7 +166,7 @@ function updateCartUI() {
   cartTotalElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
 }
 
-// Display products in the cards container
+// Display products in the cards 
 const displayProducts = (items) => {
   cardsContainer.innerHTML = '';
   const rowsToShow = parseInt(showRowsFilter.value) || items.length;
@@ -184,21 +175,21 @@ const displayProducts = (items) => {
 };
 
 showRowsFilter.addEventListener('change', () => {
-  // Re-display the products whenever the show rows value changes
+  
   buttons.forEach((button) => {
     if (button.classList.contains('active')) {
-      // Get the current active category
+      
       const category = button.textContent.toLowerCase();
       let filteredProducts = products;
 
-      // Filter products based on the current category
+      
       if (category !== 'all') {
         filteredProducts = products.filter(
           (product) => product.category.toLowerCase() === category
         );
       }
 
-      displayProducts(filteredProducts); // Display the filtered products
+      displayProducts(filteredProducts); 
     }
   });
 });
@@ -219,7 +210,7 @@ buttons.forEach((button) => {
         (product) => product.category.toLowerCase() === category
       );
     }
-    displayProducts(filteredProducts); // Display products based on category selection
+    displayProducts(filteredProducts); 
   });
 });
 function loadCartData() {
@@ -236,7 +227,7 @@ function loadCartData() {
   });
 }
 
-// Fetch data and display it
+// Fetch data and display
 const loadData = async () => {
   const data = await fetchData('https://dummyjson.com/c/9671-5bb6-4c72-9073');
 
@@ -246,41 +237,37 @@ const loadData = async () => {
   }
 };
 
-// Function to toggle the cart sidebar
+// Toggle cart sidebar
 function toggleCartSidebar() {
   cartSidebar.classList.toggle('active');
 
   if (cartSidebar.classList.contains('active')) {
-    // orderButton.textContent = 'Close Cart';
-    // Add event listener to window when sidebar is active
     window.addEventListener('click', handleWindowClick);
+
   } else {
-    // Remove event listener when sidebar is inactive
     window.removeEventListener('click', handleWindowClick);
   }
 }
 
-// Function to handle window clicks
+// Window clicks
 function handleWindowClick(event) {
   const cartSidebar = document.getElementById('cartSidebar');
   const orderButton = document.getElementById('order-button');
 
-  // Check if the click is outside the sidebar and the order button
   if (!cartSidebar.contains(event.target) && event.target !== orderButton) {
     toggleCartSidebar();
   }
 }
 
-// Add event listener to the order button
 document
   .getElementById('order-button')
   .addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent default link behavior
-    event.stopPropagation(); // Prevent the click from immediately closing the sidebar
+    event.preventDefault(); 
+    event.stopPropagation(); 
     toggleCartSidebar();
   });
 
-// Add CSS for the sidebar
+// CSS for the sidebar
 const style = document.createElement('style');
 style.textContent = `
   .cart-sidebar {
@@ -308,9 +295,9 @@ style.textContent = `
 document.head.appendChild(style);
 
 /* cart section */
-// Function to update cart section in the UI
+
 function updateCartUI() {
-  cartItemsContainer.innerHTML = ''; // Clear current cart items display
+  cartItemsContainer.innerHTML = ''; 
 
   if (cart.length === 0) {
     cartItemsContainer.innerHTML = '<li>Your cart is empty.</li>';
@@ -318,18 +305,16 @@ function updateCartUI() {
     return;
   }
 
-  let totalHarga = 0; // Initialize total price
+  let totalHarga = 0;
 
   cart.forEach((cartItem) => {
-    // Create item container
     const cartItemElement = document.createElement('div');
     cartItemElement.classList.add('cart-item');
 
-    // Product Image
     const productImg = document.createElement('div');
     productImg.classList.add('cart-product-img');
     const img = document.createElement('img');
-    img.src = cartItem.image; // Assuming each item has an image URL
+    img.src = cartItem.image; 
     img.alt = cartItem.title;
     productImg.appendChild(img);
 
@@ -356,10 +341,9 @@ function updateCartUI() {
     increaseButton.textContent = '+';
     increaseButton.classList.add('quantity-btn', 'plus');
 
-    // Update quantity on button click
+    // Update quantity on button
     decreaseButton.onclick = () => {
       if (cartItem.quantity === 1) {
-        // Remove item from localStorage
         if (cartSidebar.classList.contains('active')) {
           cartSidebar.classList.toggle('active');
         }
@@ -395,20 +379,16 @@ function updateCartUI() {
 
     cartItemsContainer.appendChild(cartItemElement);
 
-    // Calculate the total price for each item and add to total price
     totalHarga += cartItem.price * cartItem.quantity;
   });
 
-  // Update total price display
   cartTotalElement.textContent = `Total: $${totalHarga.toFixed(2)}`;
 }
 
-// Save updated cart to localStorage
 function saveCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Function to update total price when items are added or removed
 function updateTotalPrice() {
   let totalHarga = 0;
   cart.forEach((cartItem) => {
@@ -417,14 +397,11 @@ function updateTotalPrice() {
   cartTotalElement.textContent = `Total: $${totalHarga.toFixed(2)}`;
 }
 
-//end sidebar
-
 //Checkout Button
 const checkoutButton = document.querySelector('.checkout-btn');
 checkoutButton.addEventListener('click', function () {
   window.location.href = 'order.html';
 });
-//end button checkout
 
 loadData();
 loadCartData();
