@@ -65,6 +65,7 @@ body {
   background-color: var(--accent);
   color: var(--accent-content);
   transition: box-shadow 0.7s;
+  cursor: pointer;
 }
 
 #order-button:hover {
@@ -777,7 +778,6 @@ body {
   color: var(--accent-content);
 }
 
-
 .card {
   width: 14rem;
   height: 360px;
@@ -1090,19 +1090,41 @@ input {
   align-items: center;
   color: var(--base);
 }
-    /* checkout  */
-    .order-summary {
-        background: rgba(46, 40, 42, 0.9); /* Semi-transparent background */
-        color: white; /* Change text color to white for better contrast */
-        padding: 1rem;
-        border-radius: 8px;
-        margin: 1rem 0;
-    }
+/* checkout  */
+.order-summary {
+  background: rgba(46, 40, 42, 0.9); /* Semi-transparent background */
+  color: white; /* Change text color to white for better contrast */
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
 
-    /* cart section */
+/* cart section */
 
 /* Sidebar Cart Styles */
 .cart-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10;
+  position: fixed;
+  top: 82.9px;
+  right: -300px;
+  width: 400px;
+  height: calc(100% - 80px);
+  padding: 30px;
+  background-color: var(--accent-content);
+  color: var(--accent);
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cart-sidebar.active {
+  right: 0;
+}
+/* .cart-sidebar {
   position: fixed;
   right: 0;
   top: 70px;
@@ -1116,7 +1138,7 @@ input {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10;
-}
+} */
 
 .cart-item {
   display: flex;
@@ -1212,6 +1234,3 @@ input {
 .checkout-btn:hover {
   background-color: #c57349;
 }
-
-
-

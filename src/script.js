@@ -3,6 +3,8 @@ const buttons = document.querySelectorAll('.filter-button button');
 const cartItemsContainer = document.querySelector('.cart-items');
 const cartTotalElement = document.querySelector('.cart-total');
 const showRowsFilter = document.getElementById('showRows');
+const cartSidebar = document.getElementById('cartSidebar');
+const orderButton = document.getElementById('order-button');
 
 // Initialize an array to hold fetched products
 let products = [];
@@ -243,6 +245,67 @@ const loadData = async () => {
     displayProducts(products);
   }
 };
+
+// Function to toggle the cart sidebar
+function toggleCartSidebar() {
+  cartSidebar.classList.toggle('active');
+
+  if (cartSidebar.classList.contains('active')) {
+    // orderButton.textContent = 'Close Cart';
+    // Add event listener to window when sidebar is active
+    window.addEventListener('click', handleWindowClick);
+  } else {
+    // Remove event listener when sidebar is inactive
+    window.removeEventListener('click', handleWindowClick);
+  }
+}
+
+// Function to handle window clicks
+function handleWindowClick(event) {
+  const cartSidebar = document.getElementById('cartSidebar');
+  const orderButton = document.getElementById('order-button');
+
+  // Check if the click is outside the sidebar and the order button
+  if (!cartSidebar.contains(event.target) && event.target !== orderButton) {
+    toggleCartSidebar();
+  }
+}
+
+// Add event listener to the order button
+document
+  .getElementById('order-button')
+  .addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    event.stopPropagation(); // Prevent the click from immediately closing the sidebar
+    toggleCartSidebar();
+  });
+
+// Add CSS for the sidebar
+const style = document.createElement('style');
+style.textContent = `
+  .cart-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10;
+  position: fixed;
+  top: 82.9px;
+  right: -400px;
+  width: 400px;
+  height: calc(100% - 80px);
+  padding: 30px;
+  background-color: #282425;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+  .cart-sidebar.active {
+    right: 0;
+  }
+`;
+document.head.appendChild(style);
 
 /* cart section */
 // Function to update cart section in the UI
