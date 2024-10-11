@@ -84,7 +84,7 @@ const createCard = (item) => {
 
   const decreaseButton = document.createElement('button');
   decreaseButton.textContent = '-';
-  decreaseButton.classList.add('quantity-button');
+  decreaseButton.classList.add('quantity-btn');
 
   let quantityValue = 0;
   const quantityDisplay = document.createElement('span');
@@ -99,7 +99,7 @@ const createCard = (item) => {
 
   const increaseButton = document.createElement('button');
   increaseButton.textContent = '+';
-  increaseButton.classList.add('quantity-button');
+  increaseButton.classList.add('quantity-btn');
 
   increaseButton.onclick = () => {
     quantityValue++;
@@ -289,7 +289,7 @@ style.textContent = `
   justify-content: space-between;
   border-radius: 10;
   position: fixed;
-  top: 82.9px;
+  top: 82.7px;
   right: -400px;
   width: 400px;
   height: calc(100% - 80px);
@@ -360,6 +360,9 @@ function updateCartUI() {
     decreaseButton.onclick = () => {
       if (cartItem.quantity === 1) {
         // Remove item from localStorage
+        if (cartSidebar.classList.contains('active')) {
+          cartSidebar.classList.toggle('active');
+        }
         const itemIndex = cart.findIndex(
           (cartItem) => cartItem.id === cartItem.id
         );
@@ -369,6 +372,7 @@ function updateCartUI() {
       }
       if (cartItem.quantity > 1) {
         cartItem.quantity--;
+
         quantityDisplay.textContent = cartItem.quantity;
         saveCart();
         updateTotalPrice();

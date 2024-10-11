@@ -840,12 +840,13 @@ body {
   gap: 1rem;
 }
 
-.quantity-button {
+.quantity-btn {
   border-radius: 100%;
   width: 1.3rem;
   height: 1.3rem;
   background-color: var(--accent);
   border: none;
+  cursor: pointer;
 }
 
 .add-to-cart-button {
@@ -1109,7 +1110,7 @@ input {
   border-radius: 10;
   position: fixed;
   top: 82.9px;
-  right: -300px;
+  right: -400px;
   width: 400px;
   height: calc(100% - 80px);
   padding: 30px;
@@ -1163,13 +1164,13 @@ input {
   align-items: center;
 }
 
-.quantity-btn {
+/* .quantity-btn {
   background-color: transparent;
   color: white;
   border: 1px solid white;
   padding: 5px 10px;
   cursor: pointer;
-}
+} */
 
 .quantity {
   margin: 0 10px;
