@@ -411,10 +411,15 @@ function saveCart() {
 // Function to update total price when items are added or removed
 function updateTotalPrice() {
   let totalHarga = 0;
+  let totalProduct = 0;
   cart.forEach((cartItem) => {
     totalHarga += cartItem.price * cartItem.quantity;
+    totalProduct += cartItem.quantity;
   });
-  cartTotalElement.textContent = `Total: $${totalHarga.toFixed(2)}`;
+  // Update total price and item count
+  cartTotalElement.textContent = `Total: $${totalHarga.toFixed(
+    2
+  )} (${totalProduct} items)`;
 }
 
 //end sidebar
