@@ -191,7 +191,9 @@ showRowsFilter.addEventListener('change', () => {
 
       // Filter products based on the current category
       if (category !== 'all') {
-        filteredProducts = products.filter(product => product.category.toLowerCase() === category);
+        filteredProducts = products.filter(
+          (product) => product.category.toLowerCase() === category
+        );
       }
 
       displayProducts(filteredProducts); // Display the filtered products
@@ -241,7 +243,6 @@ const loadData = async () => {
     displayProducts(products);
   }
 };
-
 
 /* cart section */
 // Function to update cart section in the UI
@@ -294,6 +295,15 @@ function updateCartUI() {
 
     // Update quantity on button click
     decreaseButton.onclick = () => {
+      if (cartItem.quantity === 1) {
+        // Remove item from localStorage
+        const itemIndex = cart.findIndex(
+          (cartItem) => cartItem.id === cartItem.id
+        );
+        cart.splice(itemIndex, 1);
+        saveCart();
+        updateCartUI();
+      }
       if (cartItem.quantity > 1) {
         cartItem.quantity--;
         quantityDisplay.textContent = cartItem.quantity;
@@ -344,11 +354,10 @@ function updateTotalPrice() {
 
 //Checkout Button
 const checkoutButton = document.querySelector('.checkout-btn');
-checkoutButton.addEventListener('click', function() {
+checkoutButton.addEventListener('click', function () {
   window.location.href = 'order.html';
 });
 //end button checkout
-
 
 loadData();
 loadCartData();
