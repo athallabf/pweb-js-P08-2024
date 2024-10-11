@@ -340,37 +340,6 @@ function updateTotalPrice() {
   cartTotalElement.textContent = `Total: $${totalHarga.toFixed(2)}`;
 }
 
-// Handle Quantity Buttons
-document.querySelectorAll('.quantity-btn').forEach(button => {
-  button.addEventListener('click', function () {
-    const cartItem = this.closest('.cart-item');
-    const quantityElement = cartItem.querySelector('.quantity');
-    let quantity = parseInt(quantityElement.textContent);
-
-    if (this.classList.contains('plus')) {
-      quantity++;
-    } else if (this.classList.contains('minus') && quantity > 1) {
-      quantity--;
-    }
-
-    quantityElement.textContent = quantity;
-
-    // Update subtotal
-    updateSubtotal();
-  });
-});
-
-function updateSubtotal() {
-  let subtotal = 0;
-  document.querySelectorAll('.cart-item').forEach(item => {
-    const priceText = item.querySelector('.cart-product-details p').textContent;
-    const price = parseFloat(priceText.replace('$', ''));
-    const quantity = parseInt(item.querySelector('.quantity').textContent);
-    subtotal += price * quantity;
-  });
-  document.querySelector('.cart-footer p').textContent = 'Subtotal: $' + subtotal.toFixed(2);
-}
-
 //end sidebar
 
 //Checkout Button
@@ -379,6 +348,7 @@ checkoutButton.addEventListener('click', function() {
   window.location.href = 'order.html';
 });
 //end button checkout
+
 
 loadData();
 loadCartData();

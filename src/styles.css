@@ -1105,16 +1105,17 @@ input {
 .cart-sidebar {
   position: fixed;
   right: 0;
-  top: 0;
-  width: 350px;
+  top: 70px;
+  width: 400px;
   background-color: #111;
   color: white;
-  padding: 20px;
-  height: 100%;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  height: calc(100% - 80px);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 10;
 }
 
 .cart-item {
@@ -1158,6 +1159,12 @@ input {
 
 .cart-footer p {
   font-size: 1.2em;
+}
+
+.cart-sidebar {
+  max-height: 90vh; /* Batasi tinggi sidebar */
+  overflow-y: auto; /* Tambahkan scrollbar */
+  padding-right: 20px; /* Ruang untuk scrollbar */
 }
 
 .checkout-btn {
@@ -1205,5 +1212,6 @@ input {
 .checkout-btn:hover {
   background-color: #c57349;
 }
+
 
 
