@@ -145,7 +145,6 @@ body {
     transition: 0.4s ease;
   }
 
-  /* Show menu when checkbox is checked */
   #navbar-check:checked ~ .navbar-menu {
     display: flex;
   }
@@ -169,9 +168,7 @@ body {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  /* background-color: var(--base-content); */
   color: var(--base);
-  /* border-radius: 0.5rem; */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -249,7 +246,7 @@ iframe {
   }
 }
 
-/* * footer styles */
+/* footer styles */
 .footer {
   width: 100%;
   background-color: var(--base);
